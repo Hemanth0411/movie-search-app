@@ -7,13 +7,16 @@ app = Flask(__name__)
 ELASTICSEARCH_HOST = os.environ.get("ELASTICSEARCH_HOST", "localhost")
 
 try:
-    es = Elasticsearch(hosts=[{"host": ELASTICSEARCH_HOST, "port": 9200, "scheme": "http"}])
+    es = Elasticsearch(hosts=[
+        {"host": ELASTICSEARCH_HOST, "port": 9200, "scheme": "http"}
+        ])
     es_info = es.info()
     print("Connected to Elasticsearch!")
     print(es_info)
 except Exception as e:
     print(f"Could not connect to Elasticsearch: {e}")
     es = None
+
 
 @app.route('/')
 def index():
@@ -24,6 +27,7 @@ def index():
         "status": "ok",
         "message": "Welcome to the Movie Search App!"
     })
+
 
 @app.route('/es-status')
 def es_status():
@@ -40,6 +44,7 @@ def es_status():
             "status": "error",
             "message": "Could not connect to Elasticsearch."
         }), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

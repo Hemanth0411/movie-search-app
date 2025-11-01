@@ -1,6 +1,13 @@
 from utils.es_client import get_es_client
 
-def search_movies(query: str, genre: str = None, sort: str = "relevance", page: int = 1, size: int = 10):
+
+def search_movies(
+    query: str,
+    genre: str = None,
+    sort: str = "relevance",
+    page: int = 1,
+    size: int = 10,
+):
     es = get_es_client()
     body = {
         "query": {
@@ -9,14 +16,14 @@ def search_movies(query: str, genre: str = None, sort: str = "relevance", page: 
                     {
                         "multi_match": {
                             "query": query,
-                            "fields": ["title^2", "overview"]
+                            "fields": ["title^2", "overview"],
                         }
                     }
                 ]
             }
         },
         "from": (page - 1) * size,
-        "size": size
+        "size": size,
     }
 
     # Optional genre filter
@@ -35,7 +42,7 @@ def search_movies(query: str, genre: str = None, sort: str = "relevance", page: 
             "genre": hit["_source"]["genre"],
             "release_date": hit["_source"]["release_date"],
             "rating": hit["_source"]["rating"],
-            "score": hit["_score"]
+            "score": hit["_score"],
         }
         for hit in res["hits"]["hits"]
     ]

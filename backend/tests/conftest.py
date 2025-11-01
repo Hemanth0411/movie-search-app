@@ -2,4 +2,5 @@ import os
 import sys
 
 # Add the parent directory to PYTHONPATH
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, base_dir)

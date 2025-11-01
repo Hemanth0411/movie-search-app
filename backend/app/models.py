@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import List, Optional
 
+
 class Movie(BaseModel):
     title: str
     overview: str
@@ -8,6 +9,7 @@ class Movie(BaseModel):
     release_date: str
     rating: float
     score: Optional[float] = None
+
 
 class SearchResponse(BaseModel):
     total: int

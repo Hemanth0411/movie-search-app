@@ -5,6 +5,7 @@ from elasticsearch import Elasticsearch, helpers
 ES_URL = os.getenv("ELASTICSEARCH_URL", "http://localhost:9200")
 INDEX_NAME = "movies"
 
+
 def create_index(es_client):
     with open("mappings/movies_mapping.json", "r") as f:
         mapping = json.load(f)
@@ -14,15 +15,14 @@ def create_index(es_client):
     else:
         print(f"ℹ️ Index '{INDEX_NAME}' already exists")
 
+
 def ingest_data(es_client):
     with open("data/sample_movies.json", "r") as f:
         docs = json.load(f)
-    actions = [
-        {"_index": INDEX_NAME, "_source": doc}
-        for doc in docs
-    ]
+    actions = [{"_index": INDEX_NAME, "_source": doc} for doc in docs]
     helpers.bulk(es_client, actions)
     print(f"✅ Indexed {len(docs)} movie documents")
+
 
 if __name__ == "__main__":
     es = Elasticsearch(ES_URL)

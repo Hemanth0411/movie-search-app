@@ -1,27 +1,35 @@
-# .gitignore (starter)
-# OS
-.DS_Store
-Thumbs.db
-
 # Python
 __pycache__/
 *.py[cod]
-venv/
+*.pyo
+*.pyd
 env/
-.env
+venv/
+.venv/
+venv*/
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Node
-node_modules/
-dist/
-build/
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual env
+.env
+.env.* 
+.envrc
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
 
 # Docker
 *.log
 docker-compose.override.yml
 
-# IDEs
-.vscode/
-.idea/
-
-# Misc
-*.sqlite3
+# Node (if later)
+node_modules/
+dist/

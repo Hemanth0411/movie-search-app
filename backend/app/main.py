@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 import os
 
-app = FastAPI(title="Movie Search App")
+app = FastAPI(title="Movie Search - Mini")
 
 class Health(BaseModel):
     status: str
@@ -15,3 +15,13 @@ async def health_check():
 @app.get("/")
 def root():
     return {"message": "Movie Search backend running"}
+
+@app.get("/search", response_model=SearchResponse)
+def search(
+    q: str = Query(..., description="Search text"),
+    genre: str = Query(None, description="Optional genre filter"),
+    sort: str = Query("relevance", regex="^(relevance|rating)$"),
+    page: int = Query(1, ge=1),
+    size: int = Query(10, ge=1, le=50)
+):
+    return search_movies(q, genre, sort, page, size)

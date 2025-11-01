@@ -1,0 +1,27 @@
+# .gitignore (starter)
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+.env
+
+# Node
+node_modules/
+dist/
+build/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# IDEs
+.vscode/
+.idea/
+
+# Misc
+*.sqlite3

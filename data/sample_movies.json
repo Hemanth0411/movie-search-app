@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Inception",
+    "overview": "A thief who steals corporate secrets through dream-sharing technology is given a task of planting an idea.",
+    "genre": "Sci-Fi",
+    "release_date": "2010-07-16",
+    "rating": 8.8
+  },
+  {
+    "title": "The Dark Knight",
+    "overview": "Batman faces the Joker, a criminal mastermind who wants to plunge Gotham into anarchy.",
+    "genre": "Action",
+    "release_date": "2008-07-18",
+    "rating": 9.0
+  },
+  {
+    "title": "Interstellar",
+    "overview": "A team travels through a wormhole in search of a new home for humanity.",
+    "genre": "Adventure",
+    "release_date": "2014-11-07",
+    "rating": 8.6
+  },
+  {
+    "title": "The Matrix",
+    "overview": "A hacker discovers the reality he lives in is a simulated world controlled by machines.",
+    "genre": "Sci-Fi",
+    "release_date": "1999-03-31",
+    "rating": 8.7
+  },
+  {
+    "title": "Gladiator",
+    "overview": "A Roman general seeks revenge against the corrupt emperor who murdered his family.",
+    "genre": "Drama",
+    "release_date": "2000-05-05",
+    "rating": 8.5
+  }
+]

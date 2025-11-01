@@ -3,4 +3,7 @@ uvicorn[standard]
 elasticsearch==8.9.0
 pytest
 httpx
+black
+flake8
+pre-commit
 

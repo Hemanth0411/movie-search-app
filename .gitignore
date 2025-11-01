@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+venv*/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual env
+.env
+.env.* 
+.envrc
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Node (if later)
+node_modules/
+dist/

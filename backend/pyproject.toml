@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "movie-search-app"
+version = "0.1.0"
+authors = [
+  { name = "Hemanth0411", email = "" },
+]
+description = "Movie search application backend"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]

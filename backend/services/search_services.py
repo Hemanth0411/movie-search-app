@@ -1,4 +1,4 @@
-from app.utils.es_client import get_es_client
+from utils.es_client import get_es_client
 
 def search_movies(query: str, genre: str = None, sort: str = "relevance", page: int = 1, size: int = 10):
     es = get_es_client()

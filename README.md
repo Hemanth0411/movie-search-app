@@ -50,27 +50,5 @@ Response Example:
   ]
 }
 ```
----
-
-## 🧪 4. Testing Instructions
-
-```bash
-# Start the stack
-docker compose up -d
-
-# Re-ingest sample data if needed
-python scripts/ingest_sample.py
-
-# Test the search endpoint
-curl "http://localhost:8000/search?q=batman"
-curl "http://localhost:8000/search?q=matrix&genre=Sci-Fi&sort=rating"
-
-```
-
-**Expected**
-- JSON with total count > 0
-- Results containing title, overview, etc.
-- Works with both relevance and rating sort.
-
 
 (Full instructions to be added in later steps)

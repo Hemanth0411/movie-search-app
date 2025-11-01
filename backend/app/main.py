@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Query
-from app.services.search_service import search_movies
+from services.search_services import search_movies
 from app.models import SearchResponse
 
 app = FastAPI(title="Movie Search - Mini")

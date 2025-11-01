@@ -1,4 +1,0 @@
-Flask==3.0.3
-elasticsearch==8.13.1
-flake8==7.1.0
-pip-licenses==4.4.0

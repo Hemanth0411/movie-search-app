@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 import os
+from app.models import SearchResponse
 
 app = FastAPI(title="Movie Search - Mini")
 

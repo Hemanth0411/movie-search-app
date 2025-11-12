@@ -28,6 +28,5 @@ services:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000
 
-
 volumes:
   esdata:
